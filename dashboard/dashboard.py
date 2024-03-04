@@ -6,7 +6,7 @@ import streamlit as st
 
 sns.set(style='dark')
 
-bike_df=pd.read_csv("bike.csv")
+bike_df=pd.read_csv("https://raw.githubusercontent.com/rabiahtuladwiah/Proyek-akhir-dashboard-bike/main/dashboard/bike.csv")
 
 #mengubah weather_labels
 weather_labels = {
