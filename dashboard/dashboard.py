@@ -64,7 +64,7 @@ def yearly_analysis_df(df):
     return yearly_analysis_df
 
 with st.sidebar:
-  st.image("https://github.com/rabiahtuladwiah/Proyek-akhir-dashboard-bike/blob/main/dashboard/bike.jpg")
+  st.image('https://github.com/rabiahtuladwiah/Proyek-akhir-dashboard-bike/blob/main/dashboard/bike.jpg')
   visualization_options = ['Analisis Harian', 'Analisis Per Jam', 'Analisis pada Hari Libur', 'Analisis Cuaca Harian', 'Analisis Musim', 'Analisis Tahunan']
   visualization_choice = st.selectbox('Pilih Visualisasi Pengguna Sepeda', visualization_options)
 
