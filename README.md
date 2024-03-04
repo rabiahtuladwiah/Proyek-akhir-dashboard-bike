@@ -4,8 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyPPwPS4LPi3VnqpQBYOCR1N",
-      "include_colab_link": true
+      "authorship_tag": "ABX9TyN+BdEotLAoV7ebwQCbuNfK"
     },
     "kernelspec": {
       "name": "python3",
@@ -18,22 +17,64 @@
   "cells": [
     {
       "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
       "source": [
-        "<a href=\"https://colab.research.google.com/github/rabiahtuladwiah/Proyek-akhir-dashboard-bike/blob/main/README.md\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
+        "# **PROYEK AKHIR DICODING**\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "x_BHqjNpwlFZ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "**Dashboard Bike Sharing**"
+      ],
+      "metadata": {
+        "id": "t9lOPJ--wx-V"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Jika Menggunakan Google Colab\n",
+        "\n",
+        "Install terlebih dahulu streamlit"
+      ],
+      "metadata": {
+        "id": "FtQetiYjw5ou"
+      }
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "source": [
+        "!pip install -q streamlit"
+      ],
       "metadata": {
-        "id": "nquZ-Mwhv6OJ"
+        "id": "jVDXaLX2xuHa"
       },
-      "outputs": [],
-      "source": []
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Lalu jalankan streamlit app.py"
+      ],
+      "metadata": {
+        "id": "LkT4lCO2x0IC"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!streamlit run dashboard.py &>/dev/null&"
+      ],
+      "metadata": {
+        "id": "GBJeUiLgxsOU"
+      },
+      "execution_count": null,
+      "outputs": []
     }
   ]
 }
