@@ -67,9 +67,9 @@ with st.sidebar:
     # URL raw gambar dari GitHub
     image_url = "https://raw.githubusercontent.com/rabiahtuladwiah/Proyek-akhir-dashboard-bike/main/dashboard/bike.jpg"
     st.image(image_url, caption='Bike Image', use_column_width=True)
-
-visualization_options = ['Analisis Harian', 'Analisis Per Jam', 'Analisis pada Hari Libur', 'Analisis Cuaca Harian', 'Analisis Musim', 'Analisis Tahunan']
-visualization_choice = st.selectbox('Pilih Visualisasi Pengguna Sepeda', visualization_options)
+    
+    visualization_options = ['Analisis Harian', 'Analisis Per Jam', 'Analisis pada Hari Libur', 'Analisis Cuaca Harian', 'Analisis Musim', 'Analisis Tahunan']
+    visualization_choice = st.selectbox('Pilih Visualisasi Pengguna Sepeda', visualization_options)
 
 
 st.title('Dashboard Analisis Penggunaan Sepeda')
