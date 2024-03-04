@@ -64,9 +64,10 @@ def yearly_analysis_df(df):
     return yearly_analysis_df
 
 with st.sidebar:
-  st.image('https://github.com/rabiahtuladwiah/Proyek-akhir-dashboard-bike/blob/main/dashboard/bike.jpg')
-  visualization_options = ['Analisis Harian', 'Analisis Per Jam', 'Analisis pada Hari Libur', 'Analisis Cuaca Harian', 'Analisis Musim', 'Analisis Tahunan']
-  visualization_choice = st.selectbox('Pilih Visualisasi Pengguna Sepeda', visualization_options)
+  image_url = "https://raw.githubusercontent.com/rabiahtuladwiah/Proyek-akhir-dashboard-bike/main/dashboard/bike.jpg"
+    st.image(image_url, caption='Bike Image', use_column_width=True)
+visualization_options = ['Analisis Harian', 'Analisis Per Jam', 'Analisis pada Hari Libur', 'Analisis Cuaca Harian', 'Analisis Musim', 'Analisis Tahunan']
+visualization_choice = st.selectbox('Pilih Visualisasi Pengguna Sepeda', visualization_options)
 
 
 st.title('Dashboard Analisis Penggunaan Sepeda')
@@ -75,103 +76,68 @@ st.title('Dashboard Analisis Penggunaan Sepeda')
 if visualization_choice == 'Analisis Harian':
     st.subheader('Analisis Penggunaan Sepeda Harian')
     daily_analysis_data = create_daily_analysis_df(bike_df)
-    
-    # Fungsi untuk visualisasi
     def plot_daily_analysis(data):
         plt.figure(figsize=(10, 6))
         sns.barplot(x='weekday_day', y='cnt_day', data=data, palette='viridis')
         plt.xlabel('Hari dalam Seminggu')
         plt.ylabel('Jumlah Sepeda (Rata-rata)')
-        
-    # Panggil fungsi visualisasi
     plot_daily_analysis(daily_analysis_data)
-    
-    # Tampilkan plot di Streamlit
     st.pyplot(plt.gcf())
 
 elif visualization_choice == 'Analisis Per Jam':
     st.subheader('Analisis Penggunaan Sepeda Per Jam')
     hourly_analysis_data = create_hourly_analysis_df(bike_df)
-    
-    # Fungsi untuk visualisasi
     def plot_hourly_analysis(data):
         plt.figure(figsize=(10, 6))
         sns.lineplot(x='hr', y='cnt_hour', data=data)
         plt.xlabel('Jam dalam Sehari')
         plt.ylabel('Jumlah Sepeda (Rata-rata)')
         plt.xticks(range(24), labels=[str(i) for i in range(24)])
-
-    # Panggil fungsi visualisasi
     plot_hourly_analysis(hourly_analysis_data)
-    
-    # Tampilkan plot di Streamlit
     st.pyplot(plt.gcf())
 
 elif visualization_choice == 'Analisis pada Hari Libur':
     st.subheader('Analisis Penggunaan Sepeda pada Hari Libur')
     holiday_analysis_data = create_holiday_analysis_df(bike_df)
-    
-    # Fungsi untuk visualisasi
     def plot_holiday_analysis(data):
         plt.figure(figsize=(8, 6))
         sns.barplot(x='holiday_day', y='cnt_day', data=data, palette='dark')
         plt.xlabel('Status Hari')
         plt.ylabel('Jumlah Sepeda (Rata-rata)')
         plt.xticks([0, 1], ['Bekerja', 'Libur'])
-        
-    # Panggil fungsi visualisasi
     plot_holiday_analysis(holiday_analysis_data)
-    
-    # Tampilkan plot di Streamlit
     st.pyplot(plt.gcf())
 
 elif visualization_choice == 'Analisis Cuaca Harian':
     st.subheader('Analisis Penggunaan Sepeda Berdasarkan Cuaca Harian')
     daily_weather_analysis_data = create_daily_weather_analysis_df(bike_df)
-    
-    # Fungsi untuk visualisasi
     def plot_daily_weather_analysis(data):
         plt.figure(figsize=(10, 6))
         sns.barplot(x='weather_label_day', y='cnt_day', data=data, palette='muted')
         plt.xlabel('Faktor Cuaca')
         plt.ylabel('Jumlah Sepeda (Rata-rata)')
-        
-    # Panggil fungsi visualisasi
     plot_daily_weather_analysis(daily_weather_analysis_data)
-    
-    # Tampilkan plot di Streamlit
     st.pyplot(plt.gcf())
 
 elif visualization_choice == 'Analisis Musim':
     st.subheader('Analisis Penggunaan Sepeda Berdasarkan Musim')
     daily_season_analysis_data = create_season_analysis_df(bike_df)
-    
-    # Fungsi untuk visualisasi
     def plot_daily_season_analysis(data):
         plt.figure(figsize=(10, 6))
         sns.barplot(x='season_label_day', y='cnt_day', data=data, palette='viridis')
         plt.xlabel('Musim')
         plt.ylabel('Jumlah Sepeda (Rata-rata)')
-        
-    # Panggil fungsi visualisasi
     plot_daily_season_analysis(daily_season_analysis_data)
-    
-    # Tampilkan plot di Streamlit
     st.pyplot(plt.gcf())
 
 elif visualization_choice == 'Analisis Tahunan':
     st.subheader('Analisis Penggunaan Sepeda Tahunan')
     yearly_analysis_data = yearly_analysis_df(bike_df)
-    
-    # Fungsi untuk visualisasi
     def plot_yearly_analysis(data):
         plt.figure(figsize=(8, 6))
         sns.barplot(x='yr_day', y='cnt_day', data=data, palette='pastel')
         plt.xlabel('Tahun')
         plt.ylabel('Jumlah Sepeda (Rata-rata)')
         plt.xticks([0, 1], ['2011', '2012'])
-    # Panggil fungsi visualisasi
     plot_yearly_analysis(yearly_analysis_data)
-    
-    # Tampilkan plot di Streamlit
     st.pyplot(plt.gcf())
