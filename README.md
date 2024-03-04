@@ -1,6 +1,6 @@
 # **PROYEK AKHIR DICODING**
 
-**Dashboard Bike Sharing**
+# **Dashboard Bike Sharing**
 
 Jika Menggunakan Google Colab
 "Install terlebih dahulu streamlit"
