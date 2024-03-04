@@ -10,3 +10,10 @@ Jika Menggunakan Google Colab
 Lalu jalankan streamlit app.py
 
 `!streamlit run dashboard.py &>/dev/null&`
+
+Dapa juga install menggunakan Command Prompt
+
+`pip install streamlit babel`
+
+Lalu Jalankan 
+`streamlit run dashboard.py`
