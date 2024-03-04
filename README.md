@@ -5,8 +5,8 @@
 Jika Menggunakan Google Colab
 "Install terlebih dahulu streamlit"
 
-> !pip install -q streamlit
+`!pip install -q streamlit`
 
 Lalu jalankan streamlit app.py
 
-!streamlit run dashboard.py &>/dev/null&
+`!streamlit run dashboard.py &>/dev/null&`
