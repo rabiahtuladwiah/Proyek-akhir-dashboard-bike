@@ -1,14 +1,12 @@
+# **PROYEK AKHIR DICODING**\n",
 
-        "# **PROYEK AKHIR DICODING**\n",
+**Dashboard Bike Sharing**"
 
-        "**Dashboard Bike Sharing**"
+Jika Menggunakan Google Colab
+"Install terlebih dahulu streamlit"
 
-        "Jika Menggunakan Google Colab\n",
-        "\n",
-        "Install terlebih dahulu streamlit"
+!pip install -q streamlit
 
-        "!pip install -q streamlit"
+Lalu jalankan streamlit app.py
 
-        "Lalu jalankan streamlit app.py"
-
-        "!streamlit run dashboard.py &>/dev/null&"
+!streamlit run dashboard.py &>/dev/null&
